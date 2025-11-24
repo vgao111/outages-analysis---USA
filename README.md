@@ -181,3 +181,20 @@ My observed TVD is 978.3 which seems to be on the extreme right end of the simul
 
 # **Framing a Prediction Problem**
 
+Clearly state your prediction problem and type (classification or regression). If you are building a classifier, make sure to state whether you are performing binary classification or multiclass classification. Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score).
+
+Note: Make sure to justify what information you would know at the "time of prediction" and to only train your model using those features. For instance, if we wanted to predict your final exam grade, we couldn't use your Final Project grade, because the project is only due after the final exam! Feel free to ask questions if you're not sure.
+
+
+I will be trying to predict the `OUTAGE.DURATION`, the response variable, based on several key features available in my dataset. This will be a regression model. I chose `OUTAGE.DURATION` as my response variable because the goal of my project is to understand the factors that influence how long a major outage lasts, and to build a model that can predict outage duration at the time anoutage occurs. Outage duration is a continuous numerical variable, which makes this problem well-suited for regression. Predicting outage duration is also operationally important for utilities, as more accurate duration estimates allow for better crew allocation and improved customer satisfaction.
+
+The metric that I will be using to evaluate my model is **Mean Absolute Error (MAE)** because my data is continuous so it does not make sense to use F1-score or any metric used for categorical data. Also when comparing RMSE to MAE, MAE is better in minimizing the effects of outliers and in my case, in which almost 10% of my outage durations are outliers (from IQR rule) after dropping null values.
+
+Additionally, I will only be using features typically available at the time of prediction. For example I would not use features like `DEMAND.LOSS.MW` because it is impossible to know the estimated electricity demand lost during the outage until after the outage where you have measured the results. 
+
+# **Baseline Model**
+
+
+
+
+
