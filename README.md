@@ -181,11 +181,6 @@ My observed TVD is 978.3 which seems to be on the extreme right end of the simul
 
 # **Framing a Prediction Problem**
 
-Clearly state your prediction problem and type (classification or regression). If you are building a classifier, make sure to state whether you are performing binary classification or multiclass classification. Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score).
-
-Note: Make sure to justify what information you would know at the "time of prediction" and to only train your model using those features. For instance, if we wanted to predict your final exam grade, we couldn't use your Final Project grade, because the project is only due after the final exam! Feel free to ask questions if you're not sure.
-
-
 I will be trying to predict the `OUTAGE.DURATION`, the response variable, based on several key features available in my dataset. This will be a regression model. I chose `OUTAGE.DURATION` as my response variable because the goal of my project is to understand the factors that influence how long a major outage lasts, and to build a model that can predict outage duration at the time anoutage occurs. Outage duration is a continuous numerical variable, which makes this problem well-suited for regression. Predicting outage duration is also operationally important for utilities, as more accurate duration estimates allow for better crew allocation and improved customer satisfaction.
 
 The metric that I will be using to evaluate my model is **Mean Absolute Error (MAE)** because my data is continuous so it does not make sense to use F1-score or any metric used for categorical data. Also when comparing RMSE to MAE, MAE is better in minimizing the effects of outliers and in my case, in which almost 10% of my outage durations are outliers (from IQR rule) after dropping null values.
@@ -194,7 +189,24 @@ Additionally, I will only be using features typically available at the time of p
 
 # **Baseline Model**
 
+Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is "good" and why.
+
+Tip: Make sure to hit all of the points above: many projects in the past have lost points for not doing so.
+
+My baseline model is a multiple linear regression model that uses two features, `CAUSE.CATEGORY` and `MONTH`. These two features are well known at the time of prediction and so they are valid features. `MONTH` is a quantitative feature so I will not need to transform it. However, `CAUSE.CATEGORY` is a categorical feature and thus I will need to one-hot encode it to make it numerical. The mean absolute error (MAE) for my baseline model is roughly **2618.72**. I believe this model is a solid start but will definitely need improvements ((#explain why))
+
+
+
+# **Final Model**
 
 
 
 
+
+
+
+
+
+
+
+# **Fairness Analysis**
