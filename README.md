@@ -56,9 +56,6 @@ The number of rows in this dataset is 1534, meaning from January 2000 to July 20
 
 </div>
 
-
-
-
 ## **Exploratory Data Analysis**
 
 
@@ -69,7 +66,6 @@ The number of rows in this dataset is 1534, meaning from January 2000 to July 20
   height="600"
   frameborder="0"
 ></iframe>
-
 This univariate plot shows the count of how much major outages occured across every `YEAR` from 2000 to 2016. You can observe that the year 2011 has the highest count of major outages across the US at 221 and the year 2000 has the lowest count of major outages at just 12 with most of the major outages concentrated in later years.
 
 
