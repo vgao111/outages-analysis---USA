@@ -46,17 +46,16 @@ The number of rows in this dataset is 1534, meaning from January 2000 to July 20
 
 <div style="overflow-x: auto; width: 100%;">
 
-| YEAR | U.S._STATE | CAUSE.CATEGORY | DEMAND.LOSS.MW | CUSTOMERS.AFFECTED | CLIMATE.REGION | ANOMALY.LEVEL | MONTH | OUTAGE.DURATION | POPULATION | POPDEN_URBAN | POPDEN_RURAL | AREAPCT_URBAN | PC.REALGSP.STATE | TOTAL.PRICE | TOTAL.CUSTOMERS | TOTAL.REALGSP | DATE |
-|------|------------|----------------|----------------|--------------------|----------------|---------------|-------|-----------------|------------|--------------|--------------|----------------|------------------|-------------|-----------------|---------------|------|
-| 2011 | Minnesota  | severe weather | nan            | 70000              | East North Central | -0.3      | 7     | 3060            | 5348119    | 2279         | 18.2         | 2.14           | 51268            | 9.28        | 2595696         | 274182        | 2011-07-01 00:00:00 |
-| 2014 | Minnesota  | intentional attack | nan        | nan                | East North Central | -0.1      | 5     | 1               | 5457125    | 2279         | 18.2         | 2.14           | 53499            | 9.28        | 2640737         | 291955        | 2014-05-01 00:00:00 |
-| 2010 | Minnesota  | severe weather | nan            | 70000              | East North Central | -1.5      | 10    | 3000            | 5310903    | 2279         | 18.2         | 2.14           | 50447            | 8.15        | 2586905         | 267895        | 2010-10-01 00:00:00 |
-| 2012 | Minnesota  | severe weather | nan            | 68200              | East North Central | -0.1      | 6     | 2550            | 5380443    | 2279         | 18.2         | 2.14           | 51598            | 9.19        | 2606813         | 277627        | 2012-06-01 00:00:00 |
-| 2015 | Minnesota  | severe weather | 250            | 250000             | East North Central | 1.2       | 7     | 1740            | 5489594    | 2279         | 18.2         | 2.14           | 54431            | 10.43       | 2673531         | 292023        | 2015-07-01 00:00:00 |
-
-
+|   YEAR | U.S._STATE   | CAUSE.CATEGORY     |   DEMAND.LOSS.MW |   CUSTOMERS.AFFECTED | CLIMATE.REGION     |   ANOMALY.LEVEL |   MONTH |   OUTAGE.DURATION |   POPULATION |   POPDEN_URBAN |   POPDEN_RURAL |   AREAPCT_URBAN |   PC.REALGSP.STATE |   TOTAL.PRICE |   TOTAL.CUSTOMERS |   TOTAL.REALGSP | DATE                |
+|-------:|:-------------|:-------------------|-----------------:|---------------------:|:-------------------|----------------:|--------:|------------------:|-------------:|---------------:|---------------:|----------------:|-------------------:|--------------:|------------------:|----------------:|:--------------------|
+|   2011 | Minnesota    | severe weather     |              nan |                70000 | East North Central |            -0.3 |       7 |              3060 |      5348119 |           2279 |           18.2 |            2.14 |              51268 |          9.28 |           2595696 |          274182 | 2011-07-01 00:00:00 |
+|   2014 | Minnesota    | intentional attack |              nan |                  nan | East North Central |            -0.1 |       5 |                 1 |      5457125 |           2279 |           18.2 |            2.14 |              53499 |          9.28 |           2640737 |          291955 | 2014-05-01 00:00:00 |
+|   2010 | Minnesota    | severe weather     |              nan |                70000 | East North Central |            -1.5 |      10 |              3000 |      5310903 |           2279 |           18.2 |            2.14 |              50447 |          8.15 |           2586905 |          267895 | 2010-10-01 00:00:00 |
+|   2012 | Minnesota    | severe weather     |              nan |                68200 | East North Central |            -0.1 |       6 |              2550 |      5380443 |           2279 |           18.2 |            2.14 |              51598 |          9.19 |           2606813 |          277627 | 2012-06-01 00:00:00 |
+|   2015 | Minnesota    | severe weather     |              250 |               250000 | East North Central |             1.2 |       7 |              1740 |      5489594 |           2279 |           18.2 |            2.14 |              54431 |         10.43 |           2673531 |          292023 | 2015-07-01 00:00:00 |
 
 </div>
+
 
 
 ## **Exploratory Data Analysis**
