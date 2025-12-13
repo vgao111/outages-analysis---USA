@@ -199,3 +199,14 @@ I used GridSearchCV with 5-fold cross-validation. The best-performing parameters
 
 # **Fairness Analysis**
 
+My groups for the fairness analysis are low-GSP states versus high-GSP states. A state is defined as high-GSP if its PC.REALGSP.STATE is greater than or equal to 50,000, and low-GSP otherwise.
+
+I chose these groups because state-level economic capacity can influence infrastructure investment, emergency preparedness, and restoration resources, which may in turn affect how accurately outage duration can be predicted. It is important to ensure that the model does not systematically perform worse for outages occurring in lower-GSP states.
+
+Since my prediction task is a regression problem, I used Mean Absolute Error (MAE) as my evaluation metric. I computed the MAE separately for low-GSP and high-GSP states using the final trained model and used the difference in MAE between low and high groups as my test statistic. I then performed a permutation test, repeatedly shuffling the group labels and recalculating the test statistic to generate a null distribution.
+
+Null Hypothesis: The model is fair. Its MAE for low-GSP and high-GSP states is roughly the same, and any observed difference is due to random chance.
+
+Alternative Hypothesis: The model is unfair. Its MAE is higher for low-GSP states than for high-GSP states.
+
+Using 5,000 permutations and a significance level of 0.05, I observed an MAE of approximately 2722 minutes for low-GSP states and 2020 minutes for high-GSP states, resulting in an observed difference of about 702 minutes. The resulting p-value was 0.201, which is greater than the significance level. Therefore, I fail to reject the null hypothesis and conclude that there is insufficient evidence to suggest that the model performs unfairly with respect to this grouping.
